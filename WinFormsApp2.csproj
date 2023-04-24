@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+	<PublishAot>true</PublishAot>
+	<_SuppressWinFormsTrimError>true</_SuppressWinFormsTrimError>
+	<BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+    <CustomResourceTypesSupport>true</CustomResourceTypesSupport>
+	  <!-- Do not include the generator as a lib dependency -->
+	  <IncludeBuildOutput>false</IncludeBuildOutput>
+	  <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+	  
+  <PublishTrimmed>true</PublishTrimmed>
+	  <IsPublishable>True</IsPublishable>
+	  <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<RdXmlFile Include="RD.xml" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <Content Include="icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
+    <PackageReference Include="Selenium.Support" Version="4.9.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="4.9.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="112.0.5615.4900" />
+    <PackageReference Include="Selenium.WebDriverBackedSelenium" Version="4.1.0" />
+    <PackageReference Include="StoreKeeper" Version="0.0.6" />
+    <PackageReference Include="WinFormsComInterop" Version="0.4.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="xNet">
+      <HintPath>..\..\SRC MaxCare v4.8.5\bin\Debug\xNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+	
+
+
+</Project>
